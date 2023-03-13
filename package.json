@@ -4,10 +4,11 @@
   "description": "CICO Example ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon run src/index.js",
+    "dev": "node src/index.js",
     "start": "node src/index.js",
     "test": "mocha tests/*.spec.js --color",
-    "lint": "eslint src/* --color"
+    "lint": "eslint src/* --color",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",
