@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  console.log("a blank request has arrived")
+  console.log('a blank request has arrived');
   res.send('<h1>Hellow World 3</h1>');
 });
 
