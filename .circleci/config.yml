@@ -14,10 +14,18 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install --registry https://registry.npmjs.org
-            - run: npm test
-            - run: npm run lint
-            - run: curl "https://api.render.com/deploy/srv-cg7l4sd269v5l62jg5eg?key=UqZKtLa_A3I"
+            - run: 
+                name: install dependencies
+                command: npm install
+            - run: 
+                name: run tests
+                command: npm test
+            - run: 
+                name: Run linter
+                command: npm run lint
+            - run: 
+                name: Trigger render deploy
+                command: curl "https://api.render.com/deploy/srv-cg7l4sd269v5l62jg5eg?key=UqZKtLa_A3I"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
